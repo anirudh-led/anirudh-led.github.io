@@ -28,4 +28,32 @@
       border-right: 4px solid transparent; /* Stop cursor after typing */
     }
   }
-  
+
+p {
+  font-weight: 100;
+}
+
+body {
+  cursor: default;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  mix-blend-mode: difference;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.3s ease;  /* Transition for transform */
+  transform: translate(-50%, -50%) scale(1); /* Center and normal size */
+}
+
+.circle.enlarged {
+  transform: translate(-50%, -50%) scale(2); /* Enlarge circle */
+}
